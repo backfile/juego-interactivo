@@ -1,0 +1,335 @@
+:root {
+  --grass-color: rgb(216, 117, 59);
+  --pasto-color: green;
+  --conejo-color: #8b8b8b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  position: relative;
+  border: 8px solid black;
+  border-radius: 40px;
+  height: 600px;
+  width: 300px;
+  background-color: rgba(164, 234, 245, 0.979);
+  box-shadow: 0 4px 10px #000000;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  /* box-shadow: 0 1px 14px; */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.layer-1 {
+  z-index: 1;
+  height: 450px;
+  width: 80px;
+  bottom: 0;
+  left: 60px;
+}
+
+.layer-1 {
+  animation-name: salto;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.layer-4 {
+  animation-name: salto;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.layer-6 {
+  animation-name: salto;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.layer-2 {
+  animation-name: salto;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes salto {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: -80px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+.score {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 100px;
+}
+
+.layer-2 {
+  z-index: 2;
+  height: 450px;
+  width: 80px;
+  bottom: 0;
+  right: 60px;
+}
+
+.layer-3 {
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--grass-color);
+  height: 400px;
+  width: 220px;
+  margin: 0 auto;
+  box-shadow: 0 1px 14px;
+}
+
+.layer-4 {
+  z-index: 4;
+  height: 320px;
+  width: 80px;
+  bottom: 0;
+  left: 30px;
+}
+
+.layer-5 {
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  background-color: var(--grass-color);
+  height: 270px;
+  width: 180px;
+  box-shadow: 0 1px 14px;
+}
+
+.layer-6 {
+  z-index: 6;
+  height: 240px;
+  width: 80px;
+  bottom: 0;
+  right: 19px;
+}
+
+.layer-7 {
+  z-index: 7;
+  right: 0;
+  bottom: 0;
+  background-color: var(--grass-color);
+  height: 190px;
+  width: 125px;
+  box-shadow: 0 1px 14px;
+}
+
+.layer-8 {
+  position: absolute;
+  z-index: 8;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  width: 100px;
+  margin: 0 auto;
+  background-color: green;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.layer-9 {
+  z-index: 9;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: visible;
+  position: absolute;
+  box-shadow: 0 1px 14px;
+}
+
+.layer-10 {
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: visible;
+  position: absolute;
+  box-shadow: 0 1px 14px;
+}
+
+.pasto {
+  width: 100%;
+  background-color: var(--pasto-color);
+  height: 20px;
+  box-shadow: 0 2px 25px;
+}
+
+/* Dibujos */
+
+.left-ear--outer {
+  background-color: #f8f8f8;
+  border-radius: 90%;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  left: 10px;
+}
+
+.left-ear--inner {
+  background-color: pink;
+  border-radius: 90%;
+  width: 10px;
+  height: 50px;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+}
+
+.right-ear--outer {
+  background-color: #f8f8f8;
+  border-radius: 90%;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+}
+
+.right-ear--inner {
+  background-color: pink;
+  border-radius: 90%;
+  width: 10px;
+  height: 50px;
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+
+.head {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 100%;
+  height: 100px;
+  top: 30px;
+}
+
+.head__eye {
+  background-color: #333;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+
+  animation-name: parpadeo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes parpadeo {
+  0% {
+    transform: scaleY(1);
+  }
+
+  5% {
+    transform: scaleY(0.2);
+  }
+
+  10% {
+    transform: scaleY(1);
+  }
+}
+
+.head__eye--left {
+  top: 10px;
+  left: 30px;
+}
+
+.head__eye--right {
+  top: 10px;
+  right: 30px;
+}
+
+.cloud__part-left {
+  position: absolute;
+  background-color: #ffffff;
+  width: 120px;
+  height: 70px;
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+}
+
+.cloud__part-right {
+  position: absolute;
+  background-color: #ffffff;
+  width: 120px;
+  height: 70px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+.bush__part-left {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  bottom: 0;
+  left: 60px;
+  border-radius: 50%;
+}
+
+.bush__part-right {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  bottom: 0;
+  right: 60px;
+  border-radius: 50%;
+}
+
+.cover {
+  background-color: green;
+  height: 50px;
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  z-index: 8;
+}
